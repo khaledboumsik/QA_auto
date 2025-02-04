@@ -1,6 +1,7 @@
 import requests
 from typing import Dict, List
 from bs4 import BeautifulSoup
+
 class WebScraper:
     def __init__(self, url: str):
         self.url = url
@@ -24,5 +25,8 @@ class WebScraper:
                 "class": tag.get("class"),
                 "href": tag.get("href"),
                 "style": tag.get("style"),
+                "id": tag.get("id"),
+                "alt": tag.get("alt"),
+                "name": tag.get("name"),
             })
         return elements

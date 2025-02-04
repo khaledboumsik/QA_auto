@@ -31,21 +31,3 @@ class StyleAnalyzer:
             return contrast(rgb(*rgb1), rgb(*rgb2))
         except ValueError:
             return None
-
-class AccessibilityChecker:
-    INTERACTIVE_TAGS = {"a", "button", "input", "textarea", "select", "details"}
-    NON_FOCUSABLE_TAGS = {"div", "span", "p", "section"}
-    
-    @staticmethod
-    def check_keyboard_accessibility(element: Dict) -> List[str]:
-        issues = []
-        if element["tag"] in AccessibilityChecker.INTERACTIVE_TAGS:
-            if element["aria_hidden"] == "true":
-                issues.append("❌ `aria-hidden='true'` on an interactive element: Prevents keyboard access.")
-            if element["tabindex"] and element["tabindex"].isdigit() and int(element["tabindex"]) < 0:
-                issues.append("❌ `tabindex='-1'`: Removes from keyboard navigation.")
-        if element["tag"] in AccessibilityChecker.NON_FOCUSABLE_TAGS and element["tabindex"] is None:
-            issues.append("⚠️ Consider adding `tabindex='0'` for keyboard accessibility.")
-        if element["style"] and "outline: none" in element["style"].replace(" ", ""):
-            issues.append("❌ Focus indicator removed (`outline: none`). Hinders keyboard navigation.")
-        return issues

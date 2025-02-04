@@ -1,8 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import sys
 from test_options import TestOptions
-
+from reporter import create_report
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 
@@ -14,6 +13,7 @@ def start_test():
     
     test_results = {test: selected_tests.get(test, False) for test in TestOptions.OPTIONS}
     print(test_results)
+    create_report(url,test_results)
     return jsonify({"url": url, "test_results": test_results})
 
 if __name__ == '__main__':
