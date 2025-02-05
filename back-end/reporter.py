@@ -6,6 +6,7 @@ from broken_link_detector import BrokenLinkDetector
 from helpers.report_saver import save_report
 from performance import output_performance
 from web_page_analyzer import readability_performance
+from openai_api import generate_text,create_word_document
 class IReport:
     """Interface for all report generators"""
     def generate(self) -> str:
@@ -69,10 +70,11 @@ class ReportGenerator:
         self.url = url
         self.test_results = test_results
         self.reports: List[IReport] = []
-
+        self.scrapper=WebScraper(self.url)
+        self.content=self.scrapper.soup
     def collect_reports(self):
         if self.test_results.get("Accessibility Testing"):
-            elements = WebScraper(self.url).extract_elements()
+            elements = self.scrapper.extract_elements()
             self.reports.append(AccessibilityReport(elements))
         
         if self.test_results.get("Broken Link Detection"):
@@ -95,10 +97,10 @@ def create_report(url: str, test_results: Dict[str, bool]):
     final_report = generator.generate_report()
 
     prompt = {
-        "Context": "You are a QA senior consultant with attention to detail. The engineers at a company you are consulting for generated a report for you to review the website display code. Your job is to provide insights on how to improve it, point out mistakes, and give detailed suggestions on how to fix them, including linking useful documentation.",
-        "Information": final_report,
-        "Style": "You will respond in a way that is helpful to the engineers, providing useful documentation links to assist developers in improving code quality."
+        "Context": "You are a senior QA consultant...",
+        "Information": final_report + " " + str(generator.content),
+        "Style": "Your response should be detailed..."
     }
-
-    # response = get_and_register_memory(str(prompt))
-    # print(response)
+    
+    response = generate_text(str(prompt), 1000)
+    return create_word_document(response)

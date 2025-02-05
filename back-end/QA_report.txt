@@ -1,0 +1,32 @@
+=== ACCESSIBILITY REPORT ===
+
+=== HTML VALIDATION ISSUES ===
+
+⚠️ Deprecated 'name' attribute found on <meta>: {'tag': 'meta', 'text': '', 'aria_label': None, 'aria_expanded': None, 'aria_hidden': None, 'tabindex': None, 'class': None, 'href': None, 'style': None, 'id': None, 'alt': None, 'name': 'viewport'}
+⚠️ Deprecated 'name' attribute found on <meta>: {'tag': 'meta', 'text': '', 'aria_label': None, 'aria_expanded': None, 'aria_hidden': None, 'tabindex': None, 'class': None, 'href': None, 'style': None, 'id': None, 'alt': None, 'name': 'viewport'}
+⚠️ Deprecated 'name' attribute found on <meta>: {'tag': 'meta', 'text': '', 'aria_label': None, 'aria_expanded': None, 'aria_hidden': None, 'tabindex': None, 'class': None, 'href': None, 'style': None, 'id': None, 'alt': None, 'name': 'description'}
+⚠️ Deprecated 'name' attribute found on <meta>: {'tag': 'meta', 'text': '', 'aria_label': None, 'aria_expanded': None, 'aria_hidden': None, 'tabindex': None, 'class': None, 'href': None, 'style': None, 'id': None, 'alt': None, 'name': 'facebook-domain-verification'}
+
+HTML links health: note that 🔄 means the link is reconstructed, and ✔️ indicates a valid link.
+Broken Link Detection Report for https://samethome.com/:
+
+✅ Valid Links:
+  🔄 https://samethome.com/
+  🔄 https://samethome.com/contact
+  🔄 https://samethome.com/Shop/salon
+  🔄 https://samethome.com/Shop/chambreacoucher
+  ✔️ https://m.me/SametHomeDecoration
+  ✔️ https://wa.me/21656834015
+  ✔️ https://wa.me/21656834016
+
+📍 Local Links:
+  ✔️ https://samethome.com/
+
+❌ Invalid Links (404 or request failed):
+  ✔️ 
+  ✔️ 
+
+
+This is a report of the website's performance:
+{'Performance Score': 65.0, 'Accessibility Score': 0, 'Best Practices Score': 0, 'SEO Score': 0, 'PWA Score': 'N/A', 'First Contentful Paint': '0.8 s', 'Largest Contentful Paint': '2.1 s', 'Cumulative Layout Shift': '0.564', 'Speed Index': '1.5 s', 'Time to Interactive': '2.2 s', 'Total Blocking Time': '50 ms', 'Color Contrast Issues': 'N/A', 'Image Alt Attributes': 'N/A', 'Uses HTTPS': 'N/A', 'No Vulnerable Libraries': 'N/A', 'Mobile Friendly': 1, 'Title Element': 'N/A', 'Service Worker': 'N/A', 'Offline Support': 'N/A'}
+{'Readability': {'Flesch Reading Ease': 'Not enough text to analyze', 'Number of Words': 13, 'Number of Sentences': 2}, 'Typography': {'Small Font Issues': [], 'Total Small Fonts': 0}, 'Contrast': {'Contrast Issues': [{'Tag': 'div', 'Class': ['style_menuPhoneNav__h_7_g'], 'Style': 'width:40px;height:40px;top:0;left:0;background-color:transparent', 'Issue': 'Potential low contrast text detected'}], 'Total Contrast Issues': 1}}
