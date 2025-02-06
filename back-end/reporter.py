@@ -1,5 +1,5 @@
 from typing import Dict, List
-from style_analyser import StyleAnalyzer
+from style_analyzer import StyleAnalyzer
 from web_scraper import WebScraper
 from html_bug_detector import HTMLBugChecker
 from broken_link_detector import BrokenLinkDetector
