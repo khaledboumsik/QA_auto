@@ -98,7 +98,7 @@ The input should be the website URL with the list of the options that need analy
     "Accessibility Testing": false
   }
 }
-
+```
 ### Frontend Setup (Next.js & React)
 
 1. **Navigate to the Frontend Directory:**
