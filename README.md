@@ -134,7 +134,7 @@ openai_key = os.getenv("OPENAI_API_KEY")
 google_key = os.getenv("GOOGLE_PAGESPEED_API_KEY")
 
 print(f"OpenAI Key: {openai_key}")  # Should print the key if loaded correctly
-```
+### API Documentation
 Endpoint:
 POST /start-test
 
