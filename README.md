@@ -143,19 +143,6 @@ This endpoint accepts a website URL and a list of selected tests to perform. It 
 
 Request Body:
 ```
-## API CALL EXAMPLE: 
-```
-
-{
-  "url": "https://example.com",
-  "tests": {
-    "Broken Link Detection": true,
-    "Performance Testing": false,
-    "Readability & Typography Analysis": true,
-    "Accessibility Testing": false
-  }
-}
-```
 ## Features & Future Improvements
 
 - **Current Features:**
