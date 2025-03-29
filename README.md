@@ -143,8 +143,9 @@ This endpoint accepts a website URL and a list of selected tests to perform. It 
 
 Request Body:
 ```
-```
 ## API CALL EXAMPLE: 
+```
+
 {
   "url": "https://example.com",
   "tests": {
