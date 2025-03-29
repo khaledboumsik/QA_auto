@@ -143,6 +143,7 @@ This endpoint accepts a website URL and a list of selected tests to perform. It 
 
 Request Body:
 ```
+```
 
 {
   "url": "https://example.com",
