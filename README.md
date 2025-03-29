@@ -20,7 +20,6 @@ This project is a **website testing tool** that analyzes a website using only it
 
 - **Frontend Requirements:**
   - Node.js (v18+)
-  - Next.js
   - React
 
 ## Installation
