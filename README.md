@@ -134,14 +134,6 @@ openai_key = os.getenv("OPENAI_API_KEY")
 google_key = os.getenv("GOOGLE_PAGESPEED_API_KEY")
 
 print(f"OpenAI Key: {openai_key}")  # Should print the key if loaded correctly
-### API Documentation
-Endpoint:
-POST /start-test
-
-Description:
-This endpoint accepts a website URL and a list of selected tests to perform. It generates a report based on the selected tests and returns a downloadable Word document.
-
-Request Body:
 ```
 ## Features & Future Improvements
 
